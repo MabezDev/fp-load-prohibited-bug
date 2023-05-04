@@ -301,7 +301,6 @@ checksum = "2dffe52ecf27772e601905b7522cb4ef790d2cc203488bbd0e2fe85fcb74566d"
 [[package]]
 name = "mi-plaits-dsp"
 version = "0.1.0"
-source = "git+https://github.com/sourcebox/mi-plaits-dsp-rs#98e82d636839b854e0c21e0a7c569528b76170b6"
 dependencies = [
  "num-traits",
 ]

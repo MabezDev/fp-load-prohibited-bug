@@ -10,7 +10,7 @@ esp32s3-hal = "0.2.0"
 esp-alloc = { version = "0.1.0", features = ["oom-handler"] }
 esp-backtrace = { version = "0.2.0", features = ["esp32s3", "panic-handler", "print-uart", "exception-handler"] }
 esp-println       = { version = "0.3.0", features = ["esp32s3"] }
-mi-plaits-dsp = { git = "https://github.com/sourcebox/mi-plaits-dsp-rs" }
+mi-plaits-dsp = { path = "./mi-plaits-dsp-rs" }
 xtensa-lx-rt = { version = "0.13.0", features = ["esp32s3"], optional = true }
 libm = "0.2.6"
 
