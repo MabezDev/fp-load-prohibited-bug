@@ -6,13 +6,12 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-esp32s3-hal = "0.2.0"
-esp-alloc = { version = "0.1.0", features = ["oom-handler"] }
-esp-backtrace = { version = "0.2.0", features = ["esp32s3", "panic-handler", "print-uart", "exception-handler"] }
-esp-println       = { version = "0.3.0", features = ["esp32s3"] }
+esp32-hal = "0.12.0"
+esp-alloc = { version = "0.3.0" }
+esp-backtrace = { version = "0.7.0", features = ["esp32", "panic-handler", "print-uart", "exception-handler"] }
+esp-println       = { version = "0.5.0", features = ["esp32"] }
 mi-plaits-dsp = { path = "./mi-plaits-dsp-rs" }
-xtensa-lx-rt = { version = "0.13.0", features = ["esp32s3"], optional = true }
-libm = "0.2.6"
+xtensa-lx-rt = { version = "0.15.0", features = ["esp32"], optional = true }
 
 [features]
 default = ["rt"]
