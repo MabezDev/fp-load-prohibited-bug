@@ -2,7 +2,7 @@
 #![no_main]
 
 extern crate alloc;
-use esp32_hal::{clock::ClockControl, peripherals::Peripherals, prelude::*, timer::TimerGroup, Rtc};
+use esp32s3_hal::{clock::ClockControl, peripherals::Peripherals, prelude::*, timer::TimerGroup, Rtc};
 use esp_backtrace as _;
 
 use esp_println::println;
@@ -34,7 +34,7 @@ fn init_heap() {
 #[xtensa_lx_rt::entry]
 fn main() -> ! {
     let peripherals = Peripherals::take();
-    let mut system = peripherals.DPORT.split();
+    let mut system = peripherals.SYSTEM.split();
     let clocks = ClockControl::boot_defaults(system.clock_control).freeze();
 
     init_heap();

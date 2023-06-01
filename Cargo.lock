@@ -167,13 +167,15 @@ dependencies = [
  "embedded-dma",
  "embedded-hal",
  "esp-hal-procmacros",
- "esp32",
+ "esp-synopsys-usb-otg",
+ "esp32s3",
  "fugit",
  "lock_api",
  "nb 1.1.0",
  "paste",
  "serde",
  "strum",
+ "usb-device",
  "void",
  "xtensa-lx",
  "xtensa-lx-rt",
@@ -203,10 +205,22 @@ dependencies = [
 ]
 
 [[package]]
-name = "esp32"
-version = "0.23.0"
+name = "esp-synopsys-usb-otg"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b87863f00837e601608cc3b7d8fa9b3572e920fa55c3fcb18653e38454832871"
+checksum = "0879f2f008c0213b1a5959345e54afcbf1490c1591f5145a5e65bdff371b65af"
+dependencies = [
+ "critical-section",
+ "embedded-hal",
+ "usb-device",
+ "vcell",
+]
+
+[[package]]
+name = "esp32s3"
+version = "0.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0e4e6c4f0944fdf3f9a5c6a99a36ee31a05dac0fa02c1cb618c8c5ee0a3b44ed"
 dependencies = [
  "critical-section",
  "vcell",
@@ -214,11 +228,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "esp32-hal"
-version = "0.12.0"
+name = "esp32s3-hal"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c431aeea05309d4177eeb2b4698f983559422c62a2c598177b1ad89fef6a84bf"
+checksum = "552c3669d592a96479b2a526268e7b29421888defd08029c7bdc3c0c77cdee7c"
 dependencies = [
+ "bare-metal",
  "embedded-hal",
  "esp-hal-common",
 ]
@@ -304,7 +319,7 @@ dependencies = [
  "esp-alloc",
  "esp-backtrace",
  "esp-println",
- "esp32-hal",
+ "esp32s3-hal",
  "mi-plaits-dsp",
  "xtensa-lx-rt",
 ]
@@ -568,6 +583,12 @@ name = "unicode-ident"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6ceab39d59e4c9499d4e5a8ee0e2735b891bb7308ac83dfb4e80cad195c9f6f3"
+
+[[package]]
+name = "usb-device"
+version = "0.2.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1f6cc3adc849b5292b4075fc0d5fdcf2f24866e88e336dd27a8943090a520508"
 
 [[package]]
 name = "vcell"
